@@ -154,7 +154,7 @@ function displayPackVersion(pack, version) {
             zip.file("modrinth.index.json", JSON.stringify(modrinth, null, "\t"));
             zip.generateAsync({type:"blob"})
               .then(function(content) {
-                saveAs(content, packData.name + '-' + versionData.name + '.zip');
+                saveAs(content, packData.name + '-' + versionData.name + '.mrpack');
               });
           });
     });
