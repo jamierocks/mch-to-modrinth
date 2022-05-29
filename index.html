@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<title>ModpacksCH to Modrinth Pack Converter</title>
+
+	<link rel="stylesheet" href="./assets/css/bulma.min.css">
+</head>
+<body>
+
+<nav class="navbar is-dark" role="navigation" aria-label="main navigation">
+	<div class="navbar-brand">
+		<span class="navbar-item">
+			ModpacksCH to Modrinth Pack Converter
+		</span>
+	</div>
+</nav>	
+
+<section class="section">
+	<div class="container">
+		<div class="columns">
+
+			<div class="column is-one-third">
+				<div class="content">
+					<ul id="pack-list"></ul>
+				</div>
+			</div>
+
+			<div class="column is-hidden" id="pack-display">
+				<section class="hero is-medium is-primary" id="pack-hero">
+					<div class="hero-body">
+						<p class="title" id="pack-name"></p>
+						<p class="subtitle" id="pack-desc"></p>
+					</div>
+				</section>
+
+				<div class="content">
+					<ul id="version-list"></ul>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</section>
+
+<footer class="footer">
+	<div class="content">
+		<p>Copyright (c) Jamie Mansfield MMXXII</p>
+	</div>
+</footer>
+
+<div id="loading-modal" class="modal">
+	<div class="modal-background"></div>
+	<div class="modal-card">
+		<header class="modal-card-head">
+			<p class="modal-card-title">Loading Packs</p>
+		</header>
+		<section class="modal-card-body">
+			<p>
+				Packs are currently being loaded from modpacks.ch, please wait.
+			</p>
+		</section>
+		<footer class="modal-card-foot">
+			<progress id="loading-progress" class="progress is-primary" value="0" max="100">0%</progress>
+		</footer>
+	</div>
+</div>
+
+<script src="./assets/js/FileSaver.min.js"></script>
+<script src="./assets/js/jszip.min.js"></script>
+<script src="./assets/js/converter.js"></script>
+
+</body>
+</html>
